@@ -15,6 +15,15 @@ module.exports.touch = () => {
     if (err) {
       return `Error: ${err}`;
     }
-    console.log('The file has been created.');
+    console.log('The file has been saved.');
+  })
+}
+
+module.exports.mkdir = () => {
+  fs.mkdir('newDirectory', (err) => {
+    if (err) {
+      return `Error: ${err}`;
+    }
+    console.log(`The directory has been created.`);
   })
 }
