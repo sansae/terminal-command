@@ -9,3 +9,12 @@ module.exports.ls = () => {
     console.log(filesToString);
   });
 };
+
+module.exports.touch = () => {
+  fs.writeFile('file.txt', 'Hello beautiful world', (err) => {
+    if (err) {
+      return `Error: ${err}`;
+    }
+    console.log('The file has been created.');
+  })
+}
